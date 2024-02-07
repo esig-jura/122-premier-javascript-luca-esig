@@ -49,4 +49,6 @@ btAjouter.addEventListener('click',function ajouter() {
     //alert(txtArticles.value);
     //ulListe.innerHTML+='<li>'+txtArticles.value+'</li>';
     ulListe.innerHTML+=`<li>${txtArticles.value}</li>`;
+    txtArticles.value='';
+    txtArticles.focus();
 });
