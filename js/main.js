@@ -48,7 +48,12 @@ function ajouter() {
 btAjouter.addEventListener('click',function ajouter() {
     //alert(txtArticles.value);
     //ulListe.innerHTML+='<li>'+txtArticles.value+'</li>';
+    if (txtArticles.value.length<1){
+        alert('entrez un article!');
+        return;
+    }
     ulListe.innerHTML+=`<li>${txtArticles.value}</li>`;
     txtArticles.value='';
     txtArticles.focus();
+
 });
