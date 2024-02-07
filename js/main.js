@@ -36,6 +36,10 @@ console.log(txtArticles,btAjouter,ulListe);
 
 //fonction ajoute
 function ajouter() {
-    alert(txtArticles.value);
+    //alert(txtArticles.value);
+    //ulListe.innerHTML+='<li>'+txtArticles.value+'</li>';
+    ulListe.innerHTML+=`<li>${txtArticles.value}</li>`;
 }
+
+// pas de () sur la fonctions sinon ca la déclenche direct.
 btAjouter.onclick = ajouter;
