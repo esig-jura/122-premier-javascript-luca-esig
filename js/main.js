@@ -42,4 +42,11 @@ function ajouter() {
 }
 
 // pas de () sur la fonctions sinon ca la déclenche direct.
-btAjouter.onclick = ajouter;
+// exemple btAjouter.onclick = ajouter;
+//btAjouter.addEventListener('click',ajouter);
+
+btAjouter.addEventListener('click',function ajouter() {
+    //alert(txtArticles.value);
+    //ulListe.innerHTML+='<li>'+txtArticles.value+'</li>';
+    ulListe.innerHTML+=`<li>${txtArticles.value}</li>`;
+});
