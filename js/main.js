@@ -1,9 +1,41 @@
 /**
  * Démo mon premier JavaScript
- * @author  Steve Fallet
+ * @author  Luca Vandoni
  * @version 2.0
  * @since   2024-02-07 (date de création)
  */
 
 'use strict'; // Active le mode strict du JavaScript
+//récupérer un objet.
+const premierP =document.querySelector('p');
+const premierUl = document.querySelector('ul');
+const tousLesStrongs=document.querySelectorAll('strong');
+console.log(premierP,premierUl,tousLesStrongs);
 
+premierP.innerText= 'Bonjour le monde!';
+premierUl.style.backgroundColor='yellow';
+
+//parcours du tableau de tous les strongs
+for (let i=0;i<tousLesStrongs.length;i++){
+    tousLesStrongs[i].style.color='red';
+    tousLesStrongs[i].innerText='TOTO';
+
+}
+
+// même chose avec for...of
+for(let element of tousLesStrongs){
+    element.style.textDecoration='overline';
+}
+
+/* gestion de la liste des courses*/
+const txtArticles= document.querySelector('#article');
+const btAjouter= document.querySelector('button.ajouter');
+const ulListe= document.querySelector('ul.liste');
+
+console.log(txtArticles,btAjouter,ulListe);
+
+//fonction ajoute
+function ajouter() {
+    alert(txtArticles.value);
+}
+btAjouter.onclick = ajouter;
