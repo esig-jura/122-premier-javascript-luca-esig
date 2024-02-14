@@ -57,3 +57,9 @@ btAjouter.addEventListener('click',function ajouter() {
     txtArticles.focus();
 
 });
+
+//Ecoute les frappes clavier
+txtArticles.addEventListener('keypress',(event)=>{
+    console.log(event.key);
+
+});
