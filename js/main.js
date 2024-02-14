@@ -61,5 +61,8 @@ btAjouter.addEventListener('click',function ajouter() {
 //Ecoute les frappes clavier
 txtArticles.addEventListener('keypress',(event)=>{
     console.log(event.key);
+    if(event.key==='Enter'){
+        btAjouter.click();//Simule le clic du button
+    }
 
 });
